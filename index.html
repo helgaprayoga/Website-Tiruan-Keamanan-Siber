@@ -1,0 +1,337 @@
+<html lang="id"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIAKAD UNY - Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link href="style2.css" rel="stylesheet">
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style></head>
+
+
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="assets/images/logo_uny.png" alt="Logo UNY" class="rounded-circle" style="max-height: 40px;">
+                <span class="logo-text">SIAKAD</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-house-fill me-1"></i> Home
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-calendar-event me-1"></i> Akademik
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-book me-1"></i> Panduan
+                        </a>
+                    </li> -->
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a class="btn btn-primary px-4" href="#loginSection">
+                            <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="container mt-4">
+        <div class="text-center mb-4">
+            <h1 class="h3 fw-bold text-primary">Sistem Informasi Akademik</h1>
+            <h2 class="h4">Universitas Negeri Yogyakarta</h2>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container py-4">
+        <div class="row g-4">
+            <!-- Kalender Akademik Section -->
+            <div class="col-lg-7">
+                <div class="card h-100">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span>
+                            <i class="bi bi-calendar-week me-2"></i>Kalender Akademik
+                        </span>
+                        <div>
+                            <button class="btn btn-sm btn-light" id="fullscreenBtn" title="Lihat Detail">
+                                <i class="bi bi-fullscreen"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="calendar-card">
+                            <div class="calendar-content" id="calendarContent">
+                                <iframe src="assets/calendar/ka_2025_2026.pdf" id="calendarFrame" style="width:100%; height:500px;" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <p class="download-text ps-3 pe-3 pb-2">
+                            <i class="bi bi-info-circle me-2"></i>Silakan unduh kalender akademik untuk melihat jadwal kegiatan akademik selama satu tahun ajaran.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informasi Section -->
+            <div class="col-lg-5">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <i class="bi bi-info-circle me-2"></i>Informasi
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info" role="alert">
+                            <h5 class="alert-heading">
+                                <i class="bi bi-bell me-2"></i>Pengumuman Terbaru
+                            </h5>
+                            <hr>
+                            <p>
+                                <b> 📢 KETENTUAN PEMBAYARAN BIAYA PENDIDIKAN UKT/SPP SEMESTER GENAP 2025/2026 BAGI MAHASISWA ANGKATAN 2019—2025 </b>
+                            </p>
+                            KETENTUAN PEMBAYARAN BIAYA PENDIDIKAN UKT/SPP SEMESTER GENAP 2025/2026 BAGI MAHASISWA ANGKATAN 2019—2025 Dapat diunduh pada tautan berikut:
+                            <br>
+                            <a href="https://uny.ac.id/id/pengumuman/ketentuan-pembayaran-biaya-pendidikan-uktspp-semester-genap-20252026-bagi-mahasiswa" target="_blank">
+                                https://uny.ac.id/id/pengumuman/ketentuan-pembayaran-biaya-pendidikan-uktspp-semester-genap-20252026-bagi-mahasiswa
+                            </a>
+                        </div>
+
+                        <div class="mt-4">
+                            <h5 class="fw-bold">
+                                <i class="bi bi-check-circle me-2"></i>Jadwal Terdekat
+                            </h5>
+                            <ul class="list-group list-group-flush mt-2">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Registrasi dan Pembayaran UKT
+                                    <span class="badge bg-primary rounded-pill">12 – 30 Januari 2026</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Pengisian KRS
+                                    <span class="badge bg-primary rounded-pill">12 – 30 Januari 2026</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Perwalian dan Persetujuan KRS
+                                    <span class="badge bg-primary rounded-pill">12 – 30 Januari 2026</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Pengajuan Cuti Kuliah
+                                    <span class="badge bg-primary rounded-pill">5 – 30 Januari 2026</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- <a href="#" class="btn btn-outline-primary w-100 mt-4">
+                            <i class="bi bi-calendar-check me-2"></i>Lihat Semua Jadwal
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Sections -->
+        <div class="row g-4 mt-3" id="loginSection">
+            <!-- SSO Login -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <i class="bi bi-shield-lock me-2"></i>Login SSO Civitas Academica
+                    </div>
+                    <div class="card-body">
+                        <div class="sso-container">
+                            <a href="https://siakad.uny.ac.id/welcome/sso">
+                                <img src="assets/images/logo_sso.png" class="img-fluid" alt="">
+                            </a>
+                            <p class="mb-3">Gunakan akun email UNY Anda untuk mengakses seluruh layanan akademik.</p>
+                            <a href="sso-uny-login.html" class="btn btn-primary login-btn">
+                                <i class="bi bi-box-arrow-in-right me-2"></i>Login melalui SSO
+                            </a>
+                            <a href="https://password.uny.ac.id/" class="forgot-link mt-3">
+                                <i class="bi bi-question-circle me-1"></i>Lupa Password Email
+                            </a>
+
+                            <div class="info-box mt-4">
+                                <small class="text-muted">
+                                    <i class="bi bi-info-circle me-1"></i>NB: Lupa email student silahkan hubungi Registrasi UNY
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wali Login -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <i class="bi bi-person-badge me-2"></i>Login Wali Mahasiswa
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-3">Fasilitas ini disediakan bagi orang tua/wali mahasiswa untuk memantau perkembangan akademik.</p>
+
+                        <form action="https://siakad.uny.ac.id/welcome/loginwali" method="post" accept-charset="utf-8">
+                                                        <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-primary text-white">
+                                        <i class="bi bi-person"></i>
+                                    </span>
+                                    <input type="text" class="form-control" name="username" placeholder="Masukkan NIM Mahasiswa" required="">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-primary text-white">
+                                        <i class="bi bi-key"></i>
+                                    </span>
+                                    <input type="password" class="form-control" name="password" placeholder="Masukkan PIN Wali" required="">
+                                    <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-success login-btn">
+                                <i class="bi bi-box-arrow-in-right me-2"></i>Login sebagai Wali
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="mb-3">SIAKAD UNY</h5>
+                    <p class="small">Sistem Informasi Akademik Universitas Negeri Yogyakarta</p>
+                    <p class="small">Jl. Colombo Yogyakarta No.1, Karang Malang, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="mb-3">Tautan Cepat</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none small">Portal UNY</a></li>
+                        <li><a href="#" class="text-light text-decoration-none small">Email UNY</a></li>
+                        <li><a href="#" class="text-light text-decoration-none small">e-Learning</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="mb-3">Bantuan</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none small">Panduan Pengguna</a></li>
+                        <li><a href="#" class="text-light text-decoration-none small">FAQ</a></li>
+                        <li><a href="#" class="text-light text-decoration-none small">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="small mb-0">© 2025 Universitas Negeri Yogyakarta. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal untuk fullscreen calendar -->
+    <div class="modal fade" id="calendarModal" tabindex="-1" aria-labelledby="calendarModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="calendarModalLabel">Kalender Akademik</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <iframe src="assets/calendar/ka_2025_2026.pdf" style="width:100%; height:100vh;" frameborder="0"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <a href="assets/calendar/ka_2025_2026.pdf" download="" class="btn btn-primary">
+                        <i class="bi bi-download me-1"></i> Unduh PDF
+                    </a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordInput = this.previousElementSibling;
+            const icon = this.querySelector('i');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('bi-eye');
+                icon.classList.add('bi-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('bi-eye-slash');
+                icon.classList.add('bi-eye');
+            }
+        });
+
+        // Add hover effects for calendar toolbar buttons
+        const toolbarButtons = document.querySelectorAll('.calendar-toolbar button');
+        toolbarButtons.forEach(button => {
+            button.addEventListener('mouseover', function() {
+                this.style.color = '#4FC3F7';
+            });
+
+            button.addEventListener('mouseout', function() {
+                this.style.color = 'white';
+            });
+        });
+
+        // Fungsi fullscreen untuk kalender akademik
+        document.getElementById('fullscreenBtn').addEventListener('click', function() {
+            // Menggunakan modal Bootstrap untuk tampilan fullscreen
+            var calendarModal = new bootstrap.Modal(document.getElementById('calendarModal'));
+            calendarModal.show();
+        });
+
+        /* Alternatif kedua menggunakan browser fullscreen API - Jika diperlukan */
+        /*
+        document.getElementById('fullscreenBtn').addEventListener('click', function() {
+            var calendarFrame = document.getElementById('calendarFrame');
+            
+            if (calendarFrame.requestFullscreen) {
+                calendarFrame.requestFullscreen();
+            } else if (calendarFrame.mozRequestFullScreen) { // Firefox
+                calendarFrame.mozRequestFullScreen();
+            } else if (calendarFrame.webkitRequestFullscreen) { // Chrome, Safari dan Opera
+                calendarFrame.webkitRequestFullscreen();
+            } else if (calendarFrame.msRequestFullscreen) { // IE/Edge
+                calendarFrame.msRequestFullscreen();
+            }
+        });
+        */
+    </script>
+
+
+</body></html>

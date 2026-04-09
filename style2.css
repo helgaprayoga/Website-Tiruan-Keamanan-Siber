@@ -1,0 +1,113 @@
+:root {
+  --primary: #3949ab;
+  --secondary: #5c6bc0;
+  --accent: #4fc3f7;
+  --dark: #263238;
+  --success: #43a047;
+}
+
+/* Base & Typography */
+body {
+  background-color: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header & Navigation */
+.navbar-brand img {
+  height: 38px;
+}
+.logo-text {
+  font-weight: 600;
+  color: var(--primary);
+  margin-left: 10px;
+  font-size: 1.3rem;
+}
+
+/* Cards */
+.card {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+.card-header {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 10px 10px 0 0 !important;
+  padding: 15px 20px;
+  font-weight: 600;
+}
+
+/* Calendar Components */
+.calendar-card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.calendar-toolbar {
+  background-color: #3a3a3a;
+  padding: 10px;
+  text-align: right;
+}
+.calendar-toolbar button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.calendar-content {
+  max-height: 450px;
+  overflow-y: auto;
+}
+.download-text {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Login Components */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.info-box {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+.sso-container {
+  text-align: center;
+  padding: 20px;
+}
+.sso-logo {
+  max-width: 200px;
+  margin-bottom: 15px;
+}
+.forgot-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: var(--primary);
+  text-decoration: none;
+}
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}

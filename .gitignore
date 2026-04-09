@@ -1,0 +1,14 @@
+# Web files
+.DS_Store
+Thumbs.db
+*.log
+
+# Project specific
+.gemini/
+node_modules/
+dist/
+build/
+.env
+.git/
+*.pdf
+# assets/calendar/ka_2025_2026.pdf

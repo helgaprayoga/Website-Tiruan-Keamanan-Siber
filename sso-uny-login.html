@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://sso.uny.ac.id/login?service=http%3A%2F%2Fsiakad.uny.ac.id%2Fwelcome%2Fsso -->
+<html lang="en_US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><title>SSO UNY Login</title>
+    
+        <link type="text/css" rel="stylesheet" href="bootstrap2.min.css">
+    <link type="text/css" rel="stylesheet" href="uny-cas-kembara.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"><!-- <link rel="stylesheet" type="text/css" th:href="@{#{webjars.normalize.css}}" />
+    <link rel="stylesheet" type="text/css" th:href="@{#{webjars.bootstrap-grid.css}}" />
+    <link rel="stylesheet" type="text/css" th:href="@{#{webjars.material-components.css}}" />
+    <link rel="stylesheet" type="text/css" th:href="@{#{webjars.mdi-font.css}}" />
+    <link rel="stylesheet" type="text/css" th:href="@{#{webjars.dataTables.css}}" /> --><!-- <span th:remove="tag" th:each="file : ${#strings.arraySplit(#themes.code('cas.standard.css.file'), ',')}">
+        <link rel="stylesheet" type="text/css" href="../static/css/cas.css" th:href="@{${file}}" />
+    <link rel="shortcut icon" href="https://sso.uny.ac.id/favicon.ico">
+    <style>
+        body {
+            background-image: url('assets/images/bg-mfa_0.jpg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            min-height: 100vh !important;
+        }
+    </style>
+</head>
+
+<body class="">
+    <script type="text/javascript" src="./SSO UNY Login_files/jquery.min.js.download"></script>
+<script type="text/javascript" src="./SSO UNY Login_files/dataTables.js.download"></script>
+<script type="text/javascript" src="./SSO UNY Login_files/client.min.js.download"></script>
+
+<script type="text/javascript" src="./SSO UNY Login_files/es5-shim.min.js.download"></script>
+    <script type="text/javascript" src="./SSO UNY Login_files/css-vars-ponyfill.min.js.download"></script>
+    <script type="text/javascript" src="./SSO UNY Login_files/material-components-web.min.js.download"></script>
+    <!-- <script type="text/javascript" th:src="@{#{webjars.material-components.js}}"></script> --><script type="text/javascript" src="./SSO UNY Login_files/bootstrap2.min.js.download"></script>
+<script type="text/javascript" src="./SSO UNY Login_files/cas.js.download"></script>
+<script type="text/javascript" src="./SSO UNY Login_files/material.js.download"></script>
+<script type="text/javascript" src="./SSO UNY Login_files/custom.js.download"></script>
+<script type="text/javascript" src="./SSO UNY Login_files/ua-parser.min.js.download"></script>
+<script>
+    if (typeof resourceLoadedSuccessfully === "function") {
+        resourceLoadedSuccessfully();
+    }
+    $(() => {
+        typeof cssVars === "function" && cssVars({ onlyLegacy: true });
+    });
+    let trackGeoLocation = false;
+</script>
+
+<!-- <div th:replace="~{fragments/header :: header}">
+        <a href="fragments/header.html">Header</a> fragment will go here
+    </div> --><!-- <div class="mdc-drawer-scrim"></div> --><div class="container">
+        <div id="content">
+        <div class="row">
+            <div class="col-12 mx-md-auto">
+                <div class="login-box mt-0 pl-lg-5 pl-0">
+                    <div class="row no-gutters align-items-center ">
+                        <div class="col-md-6">
+                            <div class="form-wrap bg-white">
+                                <div>
+                                    <div>
+                                        <img alt="" src="assets/images/logo-uny-mfa.png" style="float:none; height:auto; width:80%; margin-left:9%;"></div>
+                                    <div>
+                                        <a style="font-size:18px; margin-left:18%;">U N I T Y : Single Sign-on UNY</a>
+                                    </div>
+                                    <hr></div>
+                                <section id="loginForm" class="">
+                                    <div class="">
+
+            <div>
+                <div id="serviceui" class="alert alert-info mb-2 text-justify py-1">
+
+            <div class="d-flex align-items-center px-1">
+                <img src="assets/images/webapp.png"><div id="servicedesc" class="ml-2">
+                    <div class="h4 my-1">VERIFIED</div>
+                    <span>Aplikasi terverifikasi SSO UNY</span>
+                    </div>
+            </div>
+        </div>
+            </div>
+            <div class="">
+                <form method="post" id="fm1" action="https://sso.uny.ac.id/login" onsubmit="loginFormSubmission();">
+                    <div id="login-form-controls">
+                        <div class="row">
+                            <!-- Input Username --><section id="usernameSection" class="col-12">
+                                <label for="username">
+                                    <span class="font-weight-bold"><span class="accesskey">U</span>NY ID:</span>
+                                </label>
+                                <div class="form-group position-relative">
+                                    <span class="zmdi zmdi-account"></span>
+                                    <input type="text" id="username" class="form-control" accesskey="u" autocapitalize="none" spellcheck="false" autocomplete="username" required="" placeholder="Email UNY" name="username" value=""></div>
+                                <div class="mdc-text-field-helper-line invalid-feedback">
+                                    <div class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
+                                        <span id="usernameValidationMessage">Username is a required field.</span>
+                                    </div>
+                                </div>
+
+                                <script type="text/javascript">
+                                    /*<![CDATA[*/
+                                    let username = "";
+                                    let disabled = false;
+
+                                    if (username != null && username !== '') {
+                                        $('#username').val(username);
+                                        if (disabled) {
+                                            $('#usernameSection').hide();
+                                        }
+                                    }
+                                    /*]]>*/
+                                </script>
+                            </section>
+
+                            <!-- Input Password --><section class="col-12" id="passwordSection">
+                                <label for="password">
+                                    <span class="font-weight-bold"><span class="accesskey">P</span>assword:</span>
+                                </label>
+                                <div class="form-group position-relative">
+                                    <span class="btn zmdi zmdi-eye-off zmdi-eye" id="togglePassword"></span>
+                                    <input class="form-control" type="password" id="password" accesskey="p" autocomplete="off" required="" placeholder="Password" name="password" value=""></div>
+
+                                <div class="mdc-text-field-helper-line invalid-feedback">
+                                    <div class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
+                                        <span id="passwordValidationMessage">Password is a required field.</span>
+                                    </div>
+                                </div>
+                                <div class="mdc-text-field-helper-line invalid-feedback caps-warn">
+                                    <div class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg text-danger">
+                                        <span>Tombol CAPSLOCK aktif!</span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <section class="cas-field">
+                            <input type="hidden" name="execution" value="52fe0ab0-ae2e-48b4-a94f-ae31176288a7_ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0lzSW10cFpDSTZJbVZsT1RNNFpUVm1MVFV3WVdRdE5HRTJOQzFpTVdSakxUWXlZbUZsWTJZNFpEaGpaU0o5LkczNlZ2N1NjYW1ZazVwOFJoTkE1bWFRR3pISGlJc3lzSG4wV2pzbjFqeGJJZEZ5Z2VoZ3Rta2c5MGJRVHhFLXNhOXNzM25namRBVk5EaFV4N3JGRl9icWo5T1hEdXZzRnpUS0dMZm8yd1hFWXQ0emFVQWxMTy1OTWh0c3pYaE5KampjNjN1QzVOVkFPdDBqYVZDbmdrZ2JOVVNvN2ExR3VlblNzN2pQMXhvR0cwUWRaT001ZGIwNmdSMUxsYmJBQmhDOTZaS1d0NHFaekVFY3VJRnFsUS1EOG1PdE95RlJjZFJNTU5uWXRSeXRVcURVcVNaOWl0bHZLMUhlY2RucVREeTJuZXRBc2ZmLXNKR2lOb3JySkVBNjQtQVhxUXh2MkZId3lhLWloX0FyVVBFTlZmNHFoNVBpZVN4QzVEQWxRVUlmOUxIOHFzRUNySnhZNXhCOVVadDc5dnZzb3NBUmFoOE0wSUNNS2o2YTdHM2I5YlRLZk9rcFFtN0xBQVZ6NkNGYlc5UmVucmp2bHJsdmNGY3dLMjF1cTc4a3BBQzhJMU0yanY4VGk5Z19fNHNZQ01kRlBYeGZodlctLUlnLVZvZUVTeXd1VDhZdFV4eHdKenZTRUl0TjFiLTNVNWc3NzhKSkhOczYxSzFmVXlOS3ZtWWk1VHpXVDdwcW1YQ1pqN09MRTY3eUNKOVNVbjNidThvdm9hXy1xVkYyUmdkcjRMVlFfVTNhWFpZa0trT3hvWnZXUWtaYzR2VEt2NVl1OS11bU9YV1hhdmI0ZGNnUkNpcVB3WnQ2dERLLXRXYVMxX1lRY01YcDlQRF9rOG95ekpOREFJbFh0dU13V0lmc2s2ZzJpTWRqbzB1SjZhMFRiTUtoZF9XS3NQV19sZGY1c1VEQVQzX2t3NWQwckMxWjY5cFZTUHYtejA0b2w3WVUtTzVBa0IzZ3ItR0FtR3hELTdHUDVJb0I5aXYwT0VrNFltRHpvblJVTEFrTWxFc2dyd0JfTllmOXlNNEc4b2JMeEd4MFZoU0JJSm9yZnFPZnF3YTNoWDJVRnhRVG5GbHQ3WjUzaHBJeGRzWUFsblZLRERCNkN0UWpZOHBBcUJIY3pEa0JDbTZRS3VsNGhydzlYMEZvLVBXYktzUUVBdHY5R2diTjhxT2xpRmNZQVQ0aE11YzNoNDF1U2txeU1FVUxTYWhLWTBxQ1RoUWZ2UUtpZzJHOElMX1FhQl90bm15X3lnT2tXdGpIaDBlWHQ4TkJid242c2lhMWxNNFIxYTd3cEFPZ1p1NElMX3E4TmpfTlFraG1hdWxkTDVnM2ZOSmVnTm1NVk9pZlFvdnNET1VHNjVJZ2Naekl1bm01TktaZ0NTRHkyaGdvVExxUEc1dV9MT1RZQ2U4cXplY01KMU8tMzdzUjBKRDJxOExmUDBod3FFdjNmaWJyOWFEYUFPNUpDWFdLR0E2LXBTM2FVbGxvVko2Ul85bVZ3Q2V5TjR6bDdyOTZpUmhNVVNYVVdyb3Q3clEtVHBVVEFSdHlEZS1QMEFkR0hBbTFjbmRlb0hnQjU1Q0dIY3JaMkpNemo5UEZtMk16eDVPOXJrd3Y5bHVldzdoc3lTRm1nVEp6clkybnJNWGphNXo5TkdxVmhCbGx6SnRVekF6QnJmcVlhNFRQbDR1QkFSX2N0MlRyRktnbFlTYnptdjN1aFhrZlhQci0yeFhpVndTVDgtUHlGNjdNNTZER3ppRW5EVURDZHl5UUlia3Q5Rk14NWhEVFc2Z1ZJNld3bVBYUWphMmFmTWtSd2Z6VEh2VVdyOXU5VnBIS0M5RGlQdWZhZUZhdWw2dFhaRHNxTk5fZTV6Vzh1UmNaOWRzdGtvV1lsZUliNEE4YlVIQzRzMEpZUUl0SUdIX0RTTEN5a3hpN0ZxQURqMWNGdXdNRjBPcWI2RmVLZV9UZS05SUNqSzRJVmVqZEJNbmdmOHVwZUlGM3V4Z1ZfNkFHTWRCdWkyaWRqUUZHOUVaRkM1N2prTi1ZUWRad2U5cmxmV2FKeHY2c2xzT3NrNEd6MWcyNnpacklyYnZBdUpCcmNKazY2cVJ0Uk8tdVZkalViVVRTTERmdFd6YVFJeEhuaHRKZ3ZyX252MWxDQWpscDMwVlZONkpZR1VNeGJrZXlDMmw2ZUhNSjFVbEVTOERIZ21nQVJuaWVha3FfV1B1NlhLV0hZMnVGN2JtM3Fpb3o5aDN4UklmNFJyc1JOVE5ra0t3ZGxlajJQbEdGeTZxUWFERXZkRE5xSmllUzZ1RzZOMUpKaWFHSzdIaThqLU51Ym9OUlp6ckFSaFU2OWFObUMtRVN2N05mRmhRTVMwbHJmZUZUaEhROWdQRk5SZGF1eVNCVnltODlZeFdKRW40WmZQSFRWZXEwa0pHdkVldnozTTd0YjkzZm9fR3Zua2IzT3lkUlBVYTVWOEZ1RkE4cHk1NXRpaDRwSzVZSXV5SW9sZklpRThLOWJCVjVQRW9Ed203R19MUjM5SktpdVpRODdDS1ozNzRIQ0lvTUxtQndhV3drWlh0Z20yVVhFWWJWX1hjRktlVy12QVFhdzJuTkh2YzhXSjhOaWpNTVBxX2NzY2dON2ppc1FPQTlqLUxpVGFmNXM4eFA2LTRpWWVJcHl1RTFaVlRiQmV0TkJTbF9taDBtMEdhNExVaUpiMTczWURQajVfQWQ1WmV2WVRiTG1raVY0RXR4d0RBRDAtSVJXTEg1REVTMURTZ1pmR2dpbDRWQWJDaEJWanotVWlmSHEtUU1xT05idW1qakhuWlFKQlR5ZkRGcEEyV2RmNndiMmx6VnNIRER1TWJaMVljQm9aWElDbElrLUF0VUF6bF9LeEY3cTJfak5sYkNiR25PR1hibV9ROGVPNVJfMS02QkVGUGdDY1pnd3ZzWjUyRHlyd3M4aThjSThyWklrNkI4VWNfQW1KZGVwd1htWWJCVGNpRkp4bHREelN5UFI4NXgzd0RLNG03ZGlEbTJiQXAyMnIxMFBZaFUzdXBoVnNoS1p1Ukc1ODJCdU00VXZvaExEYXBVODBNbUdSYlBOSFM4UHhNU1gtbVh6R0VCUXcxaVVDRXpUTXNsanBwNXp1QTNHMDhsRTI1MndxNnRKak96YjJrZm9rZHM5RnpvRkpKdkZ1V21VXzV0clhBcGMzblNyQk5hcFpHajRnSFdiY1JneG9kYTMyUjBUdnhMcVJhSmNlVG5vZEE3ZHN4dWxLZkpzenowZG9xWGRoSWhPUWNsLWFWYTJOWlhLbHJJTlNSRjNzc2VJdjZxeUt0X3FQQ1NNQmIxaXpKdHZDbUo4aFdtQk1ja09mQmRSMTFVMzZjalNqbkYxcEdYN3g4NGhLaFpYdDFwenJrXzI0bkZ6ZV9Cb21lLWI3ekF4WlpKMHNKRnZSb09nUG1hc0RUV3gxMVlGQUVuSHdYOWd0dTJoZ1U4LUQzU291NFJtLVlpNlIwSXZUNDRGdGlvOFltSWctamRCN1Zkdm92M081MHB5YWFfaEd5bi0tUUkxMy0yN1RRNk9xMXhTZnV6YnhqVWNHd3Q2ai14ZWlweFdkRTMwSVJNMU9sTUtUM0dlM2dwd3dYNlQwczRCRVd3REp2eG1qSkpFeHBMY19nWFlJN3Q1c3pxQUtuVjZJY2dlZDhNSHN6cWp3VW5rTHVRcUdacThlT2VjTmg0c3ZUWGpoTm9oWTZCaU1PcHlmRlI2S0hSU0daUmpFTk5xM0JvN1FTVFRoTzByc1VUa3pjaV8xbm1xY0FFUThPTlVpbDY4NWxGSmxOZEZFSDBlTDAyYXMzQUFzVllzUFhUa3FUT19taWJpRi1YQ21FS1dKUjZOUUFMb0ZLZ2c2NmdROC1mQnBmY0JNbE8wZUtFR25kcG41RFNOc1NHdEVjRlY1aVowSGZXQUlGMVVsQ18xck1tUkVJVFVkY1R6MU5ORk5UYXBzNS0ycVpSVlJWdGFZUkR3MWw3V0N5d3pLdXdpTmdGXzBzM2VRd09zWnBkeF9xQVgyaC1Canc0NzJ4d1NUcmIxSEd2WWcyNVJZX1pnbWdwUEdRVFdENjZGb1VRYzBIenNvdEt0RThkTHpuRndoQ3AwdEl2MmRfQjdCa25FZm5Hb01yQUFHLTZ2UE1jVXhnY0ZTZFEtSnU0cDVCMlVXVVh2OWhZemd6SmFHNE1Bbjd0UUxHTnhNSXVpRno5NmpsNkVWQ3lBTFJYTVc4LUpBMDVVUHBvbmxiRm5RdndNYllZeWVIMExWUWZfWnhRb1ZlOEN0c2VkVXFSaUtKbEtSYmM5V2gtQU5mZXc2TTA5c3R1LVpCWm92TjA4d0F3NzJFaHlVd25MX3Z4aXJGdHpSQ0E5bGh6UWYtOE9Fb1VBdnREb3hlUXNYcmM0cW95Ml93cnlpVW9DZlBaX0YxR3pLZWxYSDc5bHdvX2NnYno4a3VTWEYwRjlaM0o4YTQzaS1vcU5RWmpRQWkyRkZJamtQTmNQS091T2xQRUJoVGZMMHR0UHcxYldLUXZiU3dKTS1LdHY5WHpQSlM0ZmZfMHU1NEVGbVJ3NUJrZnhoeTFBZU82WU9RSlFqWk9OWDBrOFBoZzhjX0RBQWVOQ0czS05GRmVjNGdET3NyaXFTRDhKSnlrTWQ4QUI4dXQ1MlpVZWhQZzdDbFEzSU9zS0xuVnNQNTZ1ZXA1NEtRUV9haUxEdjBTcGpSeEVmUVFsOU1zZDkzc1FlU2h1c2Fnc0JtMjNVQVNTdTVwWjAxQkR0MUstc1dwTWNrUVVyR2YwTXJXc1kwM2l5YkMzckhpWkNaTFpPVkM3NmRyZ1dGRWIwdkJ3bHVPc0hrcXBrUjlrU3pvamNSU2tDckVTYW1JYk03YzNCMDlZVzJBVkE0OVg5ekNaZkNWeW1VdXJDbHY2VGQ1YldObFB0b1NGdlRwSF8xMUNibTlseG5JSi1oV0FYMmdpUWR5LVUzcXAwZkZtMVFvMjJMVGZVb2w4QnNrTFNyYklHRkRqMlR5MGVRWVFFYlRDSlU4ZndoMDB6NzNLNFJENFo1LTQ2Y04yVU11YUI4N2RlcHpZZTA3SURxTUtDNjVqUExSLXhWYjdIUXB3X0pqeVgzbzZ5eWk0WHRBb0hEOW1peU03M1JSNnhiRnhlZGJ2Y0NKWDBMN0s1Y1ZMN3ZHZTJRR0xwUGNHYnFQQTBqdUxSZ1NkUlRTRnJrdktwTV8wZTkzb0liX3ExdUtOUHVBTVBtbGt0T1RIWGFhQWZkY3R5NFRTc0FIVWh3NFNhbmdVV2tzb0Yxd09aRW01M2Y2UXU0MXNmTTFpSVVVVjVaNmJOSzJVSlFQQW5Xc0t0RHAtUkx5MmNDY3dmUmxmQ1FOOUNnc2s5dW84QXRXblhtd2hPMkJRakpFMXBaOVItNzJLN1NqWDdfbklNRURFemFyaUVYWk1vUXIxTXhhd0JnT0lPZ0VDZk1QRG8zUmk1OU9SNGZQcUJ6eUNNMXZHM2xLMmtwN20wamViNXJQeS1wQWx6M3JSLURCb1BicUdvQWx0QTg3QXR2cFFCTGFpbmVYOFV2UDd4ZmF1cGZqVXBPczcwUlM5RHphTC16aWlBVy1MRUlHNk9jdWVYSXp3bko2b0Vwckp5a3pzX0lYalJUVU11ZzJ0QkthdnJDQ0FDSUlLQzlBVUlqeDh5ODIzeWVoQmZ6aGlOR1BCcWlkZUJ1ZVI2dUNUcWhQLUtuTWZmQ1BPc0xXcVhtS19TYjF1WnFOdVo5U3h3UldBaERPT1pQWEF5VDNLMWVRTklZdWlGUk5YQlBaTUpZV05NRGpaLVd6ZFBmcHE5cXpqTW9xNlpuaGRnSjdKY3dZT19oclQ1SEVkYVVZY21SYlI5V19pVWtMbDY5WU4xOGhPcEx2VU5sWHNLV3JmMzZJY0ExVXI5eFFSdjVSMlRobXo3UmRubFVKRGMyS2RoSjNXNzRlV3htVHVTaTJoT0FfWThpRkNLNEJEb0RXMGR4akFQdzNsYWVJeHRGNDM3dEJ3eEdhQl9mTnFWb3dqRmp6TDluX0RoX2JYR01ld0E5eXlIbGxvZms5a3VHWTI5aGZkaEdIcnJHdVdSUEpVXzJmTEgzdm5zaG5oNS1EbmZ5LVMyOV94X1B5NEJhYzRDVHo5VE9GUXNaOFFyMm5nVDFuU0IxLWxTY2pyTkUxVDJzNkVUelowbmt2MVBiVEhYRWVEQ3VNZ2ZrZUpidWF0Ml96aG53QnFUSkVRTWl6YUhoamhzbndMMWx1em5EeW1YWnNCMkV4dFM1V3NJUEViY0w1YW8wLWx0T0YyaDVvTGM2RlZWTHdnZ3JQeVd0ckpaS3hfTHo1UzVQRF9oVzF5ejZlU1dvOVcxbFRaVHEtRDZ6Nmp6T0NnNm9sT3NxdUZ0UGQxRUlaUlpuYTRnMW5JLW5taU5NY21kTnpQUDRGVmx5N2FkSTl3MVdrVlVBYWV5alVxd3lxalpyVFo0eFhFYmNHUnE4Z2dyQmwwTTNEZmp4TVpCYnF3QjBHYmtEcGU4VDdaQXB2Nm1vZHlfVHE3MUlBX0p1WFYzN0xvRzN0Z3lOdEFfNkotYlprODI3ZUh5MkdaSlE0V1VWS0ExZkRLcDZ3bzNVTzRKQzlHcnVkRVRVcWlVclBpNzl4Y2NMZFRyRkszMjRWSkYwTDMxSFV1UFlfQWpSMGxRWUd4VE9MSWFUNHpVc1A4andwcmlmSUlHMHpsM3hNRjQ5am4wdENhZGVaTHRNSTFFaFQ4OFJDQVl6R0s3X1VmUUVGWVVSX1dVZ25odzVLWEFhRHpQLThsSktDSVVOZF94VXJRa3p0bHNXVWVNRHg0LW9tREtIQlNSVUNMbWZRdzlkSUNxUzBwdkFvQ09DSkh5QzV0bFRVWEM1akwwNnY0N3JtMFcwS0lkR2pSRS1QZWMzWjNobHZLa1V4cVFpRmRhYlVWd0VvVzl5OWs0ckd4OEN4QjRGcGJSVkNPRnUtZEhvamtYa0lDVzM3T2NILVZ3cE54X3NZdkoya0ZpS3ZERDhpd3ZHemRiVnd6S3NqUXdUVzBUNUw4cG8tdE5jTElBTnY3ZGEyZVdiQmlKemZzWHVEMGxRQTR0WWZRTXo3bWRVTGJ0WldfNzVTaVlCQUpsa0RDVDAweDk3cldGcGFKRkNueGFZNlBkcWh4OEVENi1TQmZqZEVjZ05aTzJhc3d5T25MdXY0d3RkRDUxbTFSWmdHOGdmNVc3RGRYOWp2WVNaVkdxZnhLcW1BdzZ2LS1XSkZiSGQzcUplSDlUeklMU3lFaWZLWkRkMF8xNUtaU2szYU1zUmhhTG4yTTdZYjhUeUc3a3NuUkxaLVBpbzNZanpPVlYya2lUM2xmMVB0T2daTzZOVm82VHNWTzBLeW9qMFpMSzR0M1dvYmxDWjJKUmFmTk0zelFYNUNqTVlXUVVtMlRRWms3dnpPU0tlTUZYR1k4S0tYb1ZsUkNLOXhwUnVDRUw1YTdCdzU3R01RMm55eVduZ0lTcjVjLjJUcUZsMlE2cy1kWDBhN1diLXhYWkI1QXF5cGFETTZiR29EWWxIRnF2TVlCSDBOMGdzWDNJaW9sRWotTkR0akk3Y0xiS3VsZjI0azJkSGVQbGRZejNn"><input type="hidden" name="_eventId" value="submit"><input type="hidden" name="geolocation"><input type="hidden" name="deviceFingerprint" value="3531942609"><script type="text/javascript">
+                                let client = new ClientJS();
+                                let fingerprint = client.getFingerprint();
+                                $('[name="deviceFingerprint"]').val(fingerprint);
+                            </script>
+                        </section>
+
+                        <div class="col-12 mt-30">
+                <button type="submit" id="submitBtn" class="btn btn-dark btn-block" name="submitBtn" accesskey="l">
+                    <span>LOGIN</span>
+                </button>
+                <input class="btn btn-info btn-block" name="reset" accesskey="c" value="CLEAR" tabindex="7" type="reset"></div>
+
+            <!-- <button class="mdc-button mdc-button--raised btn btn-primary btn-primary"
+                th:if="${recaptchaSiteKey == null}" th:name="${name ?: 'submitBtn'}" th:id="${id ?: 'submitBtn'}"
+                accesskey="l" type="submit">
+                <i class="mdi mdi-login fas fa-shield-alt" aria-hidden="true"></i>
+                <span class="mdc-button__label" th:text="#{${messageKey}}">Login</span>
+            </button>
+
+            <span th:unless="${recaptchaSiteKey == null}">
+                <span th:if="${#strings.equalsIgnoreCase(recaptchaVersion, 'GOOGLE_RECAPTCHA_V2')}">
+                    <button th:unless="${recaptchaInvisible != null AND recaptchaInvisible}"
+                        class="mdc-button mdc-button--raised btn btn-primary btn btn-primary"
+                        th:name="${name ?: 'submitBtn'}" th:id="${id ?: 'submitBtn'}" accesskey="l" type="submit"
+                        value="Login3">
+                        <span class="mdc-button__label" th:text="#{${messageKey}}">Login</span>
+                    </button>
+                    <button th:if="${recaptchaInvisible != null AND recaptchaInvisible}"
+                        class="mdc-button mdc-button--raised g-recaptcha btn btn-primary btn btn-primary"
+                        th:attr="data-sitekey=${recaptchaSiteKey}, data-badge=${recaptchaPosition}"
+                        data-callback="onRecaptchaV2Submit" th:name="${name ?: 'submitBtn'}"
+                        th:id="${id ?: 'submitBtn'}" accesskey="l">
+                        <span class="mdc-button__label" th:text="#{${messageKey}}"></span>
+                    </button>
+                </span>
+
+                <span th:if="${#strings.equalsIgnoreCase(recaptchaVersion, 'GOOGLE_RECAPTCHA_V3')}">
+                    <button class="mdc-button mdc-button--raised btn btn-primary btn btn-primary"
+                        th:name="${name ?: 'submitBtn'}" th:id="${id ?: 'submitBtn'}"
+                        th:attr="data-sitekey=${recaptchaSiteKey}" accesskey="l"
+                        th:value="#{screen.welcome.button.login}" type="submit" value="Login3">
+                        <span class="mdc-button__label" th:text="#{${messageKey}}" />
+                    </button>
+                </span>
+
+
+                <span th:if="${#strings.equalsIgnoreCase(recaptchaVersion, 'HCAPTCHA')}" th:remove="tag">
+                    <button class="mdc-button mdc-button--raised btn btn-primary btn btn-primary"
+                        th:name="${name ?: 'submitBtn'}" th:id="${id ?: 'submitBtn'}" accesskey="l" type="submit"
+                        value="Login3">
+                        <span class="mdc-button__label" th:text="#{${messageKey}}">Login</span>
+                    </button>
+                </span>
+
+                <span th:if="${#strings.equalsIgnoreCase(recaptchaVersion, 'TURNSTILE')}" th:remove="tag">
+                    <button class="mdc-button mdc-button--raised btn btn-primary btn btn-primary"
+                        th:name="${name ?: 'submitBtn'}" th:id="${id ?: 'submitBtn'}" accesskey="l" type="submit"
+                        value="Login4">
+                        <span class="mdc-button__label" th:text="#{${messageKey}}">Login</span>
+                    </button>
+                </span>
+
+            </span> --></div>
+                </form>
+
+                <section class="col-12 mt-3 mb-0" id="">
+                    <p>Lupa Password SSO? Klik <a target="_blank" href="https://password.uny.ac.id/reset">Reset</a></p>
+                </section>
+                <hr class="my-3"><!-- toogle password --><script type="text/javascript">
+                    const togglePassword = document.querySelector("#togglePassword");
+                    const password = document.querySelector("#password");
+
+                    togglePassword.addEventListener("click", function () {
+                        // toggle the type attribute
+                        const type = password.getAttribute("type") === "password" ? "text" : "password";
+                        password.setAttribute("type", type);
+
+                        // toggle the icon
+                        this.classList.toggle("zmdi-eye");
+                    });                    
+                </script>
+            </div>
+
+            <div>
+                <div id="sidebar">
+            <div class="banner alert alert-danger">
+                <div><h5><span class="font-weight-bold">Demi alasan keamanan</span></h5><ul class="list-unstyled"><li><i class="zmdi zmdi-pin-assistant text-info"></i> <a href="https://sso.uny.ac.id/logout">Logout</a> dan tutup browser setelah selesai mengakses layanan yang mengharuskan login.</li><li></li><li><i class="zmdi zmdi-pin-assistant text-info"></i> Jangan menyimpan password pada browser.</li><li><i class="zmdi zmdi-pin-assistant text-info"></i> Aktifkan Multi-Factor Authentication (MFA) melalui <a href="https://password.uny.ac.id/">password.uny.ac.id</a>, berikut panduan <a target="_blank" href="https://uny.id/mfa-pdf">pdf</a> dan <a target="_blank" href="https://uny.id/mfa-vid">video</a>.</li></ul></div>
+            </div>
+        </div>
+            </div>
+        </div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="background:rgba(255, 255, 255, 0.8) !important; border-radius: 0px 10px 10px 0px">
+                            <div>
+                                <div id="attention">
+            <div class="content text-center">
+                <div class="border-bottom pb-5 mb-5">
+                    <h3 class="c-black">
+                        <span class="h3 c-black">Petunjuk SSO UNY</span>
+                    </h3>
+                    <span style="font-size: 16px;">UNY ID adalah identitas berbasis akun email UNY (@uny.ac.id dan/atau @student.uny.ac.id) yang dapat digunakan untuk mengakses berbagai layanan sistem informasi yang ada di Universitas Negeri Yogyakarta.</span>
+                </div>
+                <!-- <hr> --><div class="mt-0">
+                    <h3>
+                        <span class=" text-danger">PERHATIAN !</span>
+                    </h3>
+                    <span style="font-size: 16px;"><ul class="list-unstyled"><li><i class="zmdi zmdi-alert-triangle text-danger"></i> JANGAN PERNAH MEMBERIKAN INFORMASI TERKAIT UNY ID DAN PASSWORD KEPADA SIAPA PUN!</li> <li><i class="zmdi zmdi-alert-triangle text-danger"></i> Isikan UNY ID :<br> -&nbsp;<strong>username@uny.ac.id</strong>&nbsp;untuk Staff<br> -&nbsp;<strong>username@student.uny.ac.id</strong>&nbsp;untuk Mahasiswa</li></ul></span>
+                </div>
+
+                <!-- <p><span style="font-size:16px"><span style="color:#c20c0c"><strong><span
+                                    th:utext="#{screen.welcome.attention.buttom.title}">PERHATIAN
+                                    !</span></strong></span></span>
+                </p> --><div class="socials">
+                </div>
+            </div>
+        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <footer class="py-3 d-flex justify-content-center align-items-center cas-footer">
+    <span id="copyright" class="text-white">Copyright © 2025 Universitas Negeri Yogyakarta</span>
+    <!-- <span id="poweredBy" class="px-3 d-inline-block">
+        <span th:utext="#{poweredBy}">Powered by </span><a href="https://github.com/apereo/cas">Apereo CAS</a>
+    </span>
+    <code class="version" th:if="${'true' == #strings.defaultString(#themes.code('cas.footer.show-version'), 'true')}"
+        th:text="${T(org.apereo.cas.util.CasVersion).getVersion() + ' ' + T(org.apereo.cas.util.CasVersion).getDateTime()}">
+    </code> --></footer>
+
+
+
+</body></html>
